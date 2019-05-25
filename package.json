@@ -1,5 +1,5 @@
 {
-  "name": "react-native-pusher-push-notifications",
+  "name": "asyasoft-pusher-push-notifications",
   "version": "2.1.0",
   "description": "Manage pusher channel subscriptions from within React Native JS",
   "main": "index.js",
