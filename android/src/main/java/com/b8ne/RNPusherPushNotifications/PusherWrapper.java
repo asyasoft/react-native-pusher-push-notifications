@@ -65,7 +65,7 @@ public class PusherWrapper {
                     map.putString("body", notification.getBody());
                     map.putString("title", notification.getTitle());
                     map.putString("tag", notification.getTag());
-                    map.putString("click_action", notification.getClickAction());
+                    map.putString("click_action", "android.intent.action.VIEW");//notification.getClickAction());
                     map.putString("icon", notification.getIcon());
                     map.putString("color", notification.getColor());
 //                    map.putString("link", notification.getLink());
