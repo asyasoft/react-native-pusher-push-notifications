@@ -69,7 +69,7 @@ public class PusherWrapper {
                     map.putString("icon", notification.getIcon());
                     map.putString("color", notification.getColor());
 //                    map.putString("link", notification.getLink());
-                    map.putString("link", notification.getTag());
+                    map.putString("link", "daikin://Home/Settings");
 
                     context.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(notificationEvent, map);
                     //System.out.print(remoteMessage.toString());
