@@ -69,6 +69,7 @@ public class PusherWrapper {
                     map.putString("icon", notification.getIcon());
                     map.putString("color", notification.getColor());
 //                    map.putString("link", notification.getLink());
+                    map.putString("link", notification.getTag());
 
                     context.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(notificationEvent, map);
                     //System.out.print(remoteMessage.toString());
