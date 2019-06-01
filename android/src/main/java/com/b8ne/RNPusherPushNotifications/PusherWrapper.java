@@ -65,12 +65,14 @@ public class PusherWrapper {
                     map.putString("body", notification.getBody());
                     map.putString("title", notification.getTitle());
                     map.putString("tag", notification.getTag());
-                    map.putString("click_action", "android.intent.action.VIEW");//notification.getClickAction());
+                    map.putString("click_action", notification.getClickAction());
                     map.putString("icon", notification.getIcon());
                     map.putString("color", notification.getColor());
 //                    map.putString("link", notification.getLink());
-                    map.putString("link", "daikin://Home/Settings");
-                    map.putString("url", "daikin://Home/Settings");
+                    Map<String, String> data = remoteMessage.getData();
+                    if (data) {
+                      map.putString("data", data.toString());
+                    }
 
                     context.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(notificationEvent, map);
                     //System.out.print(remoteMessage.toString());
@@ -180,7 +182,4 @@ public class PusherWrapper {
             }
         });
     }
-
-
-
 }
