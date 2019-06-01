@@ -5,7 +5,7 @@ import android.util.Log;
 import android.app.Activity;
 
 import java.util.Set;
-
+import java.util.Map;
 import com.facebook.react.bridge.*;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.google.firebase.messaging.RemoteMessage;
@@ -70,7 +70,7 @@ public class PusherWrapper {
                     map.putString("color", notification.getColor());
 //                    map.putString("link", notification.getLink());
                     Map<String, String> data = remoteMessage.getData();
-                    if (data) {
+                    if (data != null && data.size() > 0) {
                       map.putString("data", data.toString());
                     }
 
